@@ -27,7 +27,7 @@ export default function Card(props) {
           console.log("remove");
 
       dispatch(REMOVE_ITEM(item))
-      //dispatch(SUB_PRICE(item))
+      dispatch(SUB_PRICE(item))
 
         setClassN("bottom");
         setActive(false);
