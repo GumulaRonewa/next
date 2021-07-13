@@ -63,6 +63,14 @@ export default function ShopPage() {
          Price:"720"
     }
     ]
+  const has = (arr,item) => {
+        for (var i = 0; i <arr.length; i++) {
+          if(arr[i].img===item.img){
+            return true;
+          }
+        }
+        return false;
+  }
   const handleClick = () => {
         setfilterMenu(false);
 
@@ -141,7 +149,7 @@ export default function ShopPage() {
       {
              items.map((item,index)=>(
        <a key={index} className="ProductCard_root__2we6k ProductCard_simple__thMup animated fadeIn">
-           <Card item={item} count={count} active={count.includes(item)} />
+           <Card item={item} active={this.has(count,item)} />
        </a>
        ))
      }
