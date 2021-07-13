@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useState } from 'react';
-import {  ADD_TO_CART , REMOVE_ITEM, ADD_PRICE } from '../../actions'
+import {  ADD_TO_CART , SUB_PRICE, REMOVE_ITEM, ADD_PRICE } from '../../actions'
 import { useSelector, useDispatch } from 'react-redux'
 
 export default function Card(props) {
@@ -27,6 +27,7 @@ export default function Card(props) {
      }
      else{
               dispatch(REMOVE_ITEM(item))
+      dispatch(SUB_PRICE(item))
 
         setClassN("bottom");
         setActive(false);

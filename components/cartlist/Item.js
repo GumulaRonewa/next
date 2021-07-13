@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useSelector, useDispatch } from 'react-redux'
-import {  REMOVE_ITEM } from '../../actions'
+import {  REMOVE_ITEM,SUB_PRICE } from '../../actions'
 export default function Item(props) {
     var item=props.item;
       const dispatch = useDispatch();
@@ -8,6 +8,7 @@ export default function Item(props) {
     const handleClick = () => {
      
               dispatch(REMOVE_ITEM(item))
+              dispatch(SUB_ITEM(item))
 
        
   };

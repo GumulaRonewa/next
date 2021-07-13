@@ -8,10 +8,11 @@ export const serverRenderClock = () => (dispatch) =>
   })
 
 // INITIALIZES CLOCK ON CLIENT
-export const startClock = () => (dispatch) =>
-  setInterval(() => {
-    dispatch({ type: types.TICK, payload: { light: true, ts: Date.now() } })
-  }, 1000)
+export const SUB_PRICE = (product) => (dispatch, getState) => {
+  var Price = product.Price;
+    dispatch({type: types.DECREMENT,payload:{price:Price} })
+
+  }
 export const ADD_PRICE = (product) => (dispatch, getState) => {
   var Price = product.Price;
     dispatch({type: types.INCREMENT,payload:{price:Price} })
