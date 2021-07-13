@@ -4,8 +4,8 @@ import {  ADD_TO_CART , SUB_PRICE, REMOVE_ITEM, ADD_PRICE } from '../../actions'
 import { useSelector, useDispatch } from 'react-redux'
 
 export default function Card(props) {
-  const [active, setActive] = useState(false);
-  const [classN, setClassN] = useState("bottom");
+  const [active, setActive] = useState(props.active);
+  const [classN, setClassN] = useState(props.active ? "bottom clicked":"bottom");
   var item=props.item;
   var sizes=item.sizes;
   const count = useSelector((state) => state.counter);

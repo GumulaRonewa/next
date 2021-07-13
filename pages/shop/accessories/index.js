@@ -8,6 +8,9 @@ export default function ShopPage() {
     const size = useWindowSize();
       const [active, setActive] = useState(false);
       const [filterMenu, setfilterMenu] = useState(false);
+      var count = useSelector((state) => state.counter);
+
+     count=count.cartItems;
     const items=[
      {
        name:"Prm Hoodie",
@@ -138,7 +141,7 @@ export default function ShopPage() {
       {
              items.map((item,index)=>(
        <a key={index} className="ProductCard_root__2we6k ProductCard_simple__thMup animated fadeIn">
-           <Card item={item}/>
+           <Card item={item} active={count.includes(item)} />
        </a>
        ))
      }
