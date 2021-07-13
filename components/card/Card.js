@@ -20,7 +20,7 @@ export default function Card(props) {
    const handleClick = () => {
      if(!active){
       dispatch(ADD_TO_CART(item))
-      dispatch(ADD_TO_PRICE(item))
+      dispatch(ADD_PRICE(item))
         setClassN("bottom clicked");
         setActive(true);
        
