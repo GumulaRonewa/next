@@ -34,7 +34,6 @@ const totalReducer = (state = 0, { type, payload }) => {
   switch (type) {
     case types.INCREMENT:
       var total=parseInt(state) +parseInt(payload.price);
-      console.log(payload);
       Cookies.set("total", JSON.stringify(total));
       return total;
     default:

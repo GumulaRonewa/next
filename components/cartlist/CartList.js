@@ -5,7 +5,8 @@ import { useSelector, useDispatch } from 'react-redux'
 
 export default function CartList() {
   var count = useSelector((state) => state.counter);
-
+  var total = useSelector((state) => state.total);
+  console.log(total);
    count=count.cartItems;
       count =count.reverse()
     
