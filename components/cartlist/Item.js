@@ -23,8 +23,8 @@ export default function Item(props) {
             <span className="CartItem_productName__x9t-a" style={{marginLeft:10}}>Price: ZAR {item.Price}</span>
 
           </div>
-           <div style={{display:'grid',placeItems:"center"}}>
-             <button onClick={handleClick} style={{marginRight:10}} className="remove"><i className="material-icons">clear</i></button>
+           <div style={{display:'grid',placeItems:"center",width:"90%"}}>
+             <button onClick={handleClick} style={{marginRight:10,width:"90%"}} className="remove"><i className="material-icons">clear</i></button>
 
             </div>
 
