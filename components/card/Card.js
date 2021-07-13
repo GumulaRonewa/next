@@ -7,33 +7,29 @@ export default function Card(props) {
   const [active, setActive] = useState(props.active);
   const [classN, setClassN] = useState(props.active ? "bottom clicked":"bottom");
   var item=props.item;
-  console.log(props);
   var sizes=item.sizes;
   const count = useSelector((state) => state.counter);
   const dispatch = useDispatch();
-  const handleSizes = (key) => {
- 
-
-             sizes[key].class="active";
-
-  }
+  
    const handleClick = () => {
-     if(!active){
+      console.log("add");
+
       dispatch(ADD_TO_CART(item))
       dispatch(ADD_PRICE(item))
         setClassN("bottom clicked");
         setActive(true);
        
-     }
-     else{
-              dispatch(REMOVE_ITEM(item))
+     
+  };
+  const handleRemove = () => {
+          console.log("remove");
+
+      dispatch(REMOVE_ITEM(item))
       dispatch(SUB_PRICE(item))
 
         setClassN("bottom");
         setActive(false);
-
-        }
-  };
+    }
 	return(
 <div className="wrapper">
        <div className="container">
@@ -58,7 +54,7 @@ export default function Card(props) {
           <h1>{item.name}</h1>
           <p>Added to your cart</p>
         </div>
-        <button onClick={handleClick} className="remove"><i className="material-icons">clear</i></button>
+        <button onClick={handleRemove} className="remove"><i className="material-icons">clear</i></button>
       </div>
       </div>
       </div>
