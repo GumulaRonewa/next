@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import {  ADD_TO_CART , REMOVE_ITEM, resetCount } from '../../../actions'
+import {  ADD_TO_CART , REMOVE_ITEM } from '../../../actions'
 import Card from "../../../components/card/Card"
 import { useState, useEffect } from "react";
 import Link from 'next/link';

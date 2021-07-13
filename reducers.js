@@ -30,7 +30,7 @@ const initialTimerState = {
 }
 
 // TIMER REDUCER
-const totalReducer = (state = 0, { type, payload }) => {
+const totalReducer = (state = parseInt(getTotal() || "0"), { type, payload }) => {
   switch (type) {
     case types.INCREMENT:
       var total=parseInt(state) +parseInt(payload.price);
@@ -40,7 +40,10 @@ const totalReducer = (state = 0, { type, payload }) => {
       return parseInt(state)
   }
 }
-
+function getTotal() {
+  
+    return Cookies.get("total")
+}
 // COMBINED REDUCERS
 const reducers = {
   counter: counterReducer,

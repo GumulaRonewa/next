@@ -5,8 +5,10 @@ import { useSelector, useDispatch } from 'react-redux'
 
 export default function CartList() {
   var count = useSelector((state) => state.counter);
-  var total = useSelector((state) => state.total);
-  console.log(total);
+  var sub = useSelector((state) => state.total);
+  var tax =sub*0.15;
+  sub =sub*0.85;
+  var total =100+tax+sub;
    count=count.cartItems;
       count =count.reverse()
     
@@ -30,14 +32,14 @@ export default function CartList() {
                      <div className="flex-shrink-0 px-6 py-6 sm:px-6 sticky z-20 bottom-0 w-full right-0 left-0 bg-accent-0 border-t text-sm">
                           <ul className="pb-2">
                               <li className="flex justify-between py-1">
-                                <span>Subtotal</span><span> ZAR 32499</span>
+                                <span>Subtotal</span><span> ZAR {sub}</span>
                               </li>
                               <li className="flex justify-between py-1">
                                 <span>Taxes</span>
-                                <span>ZAR 4200</span>
+                                <span>ZAR {tax}</span>
                               </li><li className="flex justify-between py-1">
                               <span>Shipping</span><span className="font-bold tracking-wide">ZAR 100</span>
-                              </li></ul><div className="flex justify-between border-t border-accent-2 py-3 font-bold mb-2"><span>Total</span><span>ZA 37299</span></div><div>
+                              </li></ul><div className="flex justify-between border-t border-accent-2 py-3 font-bold mb-2"><span>Total</span><span>ZA {total}</span></div><div>
                               <button className="bg-black font-medium text-white"  style={{width: "100%",height:40}}>Proceed to Checkout</button>
                               </div></div>
             </div>
