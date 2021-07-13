@@ -30,13 +30,12 @@ const initialTimerState = {
 }
 
 // TIMER REDUCER
-const timerReducer = (state = initialTimerState, { type, payload }) => {
+const totalReducer = (state = 0, { type, payload }) => {
   switch (type) {
-    case types.TICK:
-      return {
-        lastUpdate: payload.ts,
-        light: !!payload.light,
-      }
+    case types.INCREMENT:
+      var total=state +payload.price;
+      Cookies.set("total", JSON.stringify(total));
+      return total;
     default:
       return state
   }
@@ -45,7 +44,7 @@ const timerReducer = (state = initialTimerState, { type, payload }) => {
 // COMBINED REDUCERS
 const reducers = {
   counter: counterReducer,
-  timer: timerReducer,
+  total: totalReducer,
 }
 
 export default combineReducers(reducers)

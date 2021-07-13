@@ -12,7 +12,11 @@ export const startClock = () => (dispatch) =>
   setInterval(() => {
     dispatch({ type: types.TICK, payload: { light: true, ts: Date.now() } })
   }, 1000)
+export const ADD_PRICE = (product) => (dispatch, getState) => {
+  var Price = product.Price;
+    dispatch({type: types.INCREMENT,payload:{price:Price} })
 
+  }
 // INCREMENT COUNTER BY 1
 export const ADD_TO_CART = (product) => (dispatch, getState) => {
   const cartItems = getState().counter.cartItems;

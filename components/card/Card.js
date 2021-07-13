@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useState } from 'react';
-import {  ADD_TO_CART , REMOVE_ITEM, resetCount } from '../../actions'
+import {  ADD_TO_CART , REMOVE_ITEM, ADD_PRICE } from '../../actions'
 import { useSelector, useDispatch } from 'react-redux'
 
 export default function Card(props) {
@@ -20,6 +20,7 @@ export default function Card(props) {
    const handleClick = () => {
      if(!active){
       dispatch(ADD_TO_CART(item))
+      dispatch(ADD_TO_PRICE(item))
         setClassN("bottom clicked");
         setActive(true);
        

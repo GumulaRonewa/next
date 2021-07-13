@@ -8,7 +8,7 @@ export default function CartList() {
 
    count=count.cartItems;
       count =count.reverse()
-
+    
   return (
     <>
                   <div style={{zIndex:1,width:320}} className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-gray-200 ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1">
