@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import {  REMOVE_ITEM } from '../../actions'
 export default function Item(props) {
     var item=props.item;
+      const dispatch = useDispatch();
+
     const handleClick = () => {
      
               dispatch(REMOVE_ITEM(item))
