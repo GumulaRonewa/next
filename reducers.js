@@ -37,7 +37,8 @@ const totalReducer = (state = parseInt(getTotal() || "0"), { type, payload }) =>
       Cookies.set("total", JSON.stringify(total));
       return total;
     case types.DECREMENT:
-      var total=parseInt(state) -parseInt(payload.price);
+      var check=parseInt(state) -parseInt(payload.price);
+      var total= check<=0 ? 0: check;
       Cookies.set("total", JSON.stringify(total));
       return total;
     default:
