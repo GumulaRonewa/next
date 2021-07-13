@@ -8,7 +8,8 @@ export default function CartList() {
   var sub = useSelector((state) => state.total);
   var tax =sub*0.15;
   sub =sub*0.85;
-  var total =100+tax+sub;
+  var ship= sub===0 ? 0:100;
+  var total =ship+tax+sub;
    count=count.cartItems;
       count =count.reverse()
     
@@ -38,7 +39,7 @@ export default function CartList() {
                                 <span>Taxes</span>
                                 <span>ZAR {tax}</span>
                               </li><li className="flex justify-between py-1">
-                              <span>Shipping</span><span className="font-bold tracking-wide">ZAR 100</span>
+                              <span>Shipping</span><span className="font-bold tracking-wide">ZAR {ship}</span>
                               </li></ul><div className="flex justify-between border-t border-accent-2 py-3 font-bold mb-2"><span>Total</span><span>ZA {total}</span></div><div>
                               <button className="bg-black font-medium text-white"  style={{width: "100%",height:40}}>Proceed to Checkout</button>
                               </div></div>

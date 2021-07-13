@@ -14,7 +14,6 @@ export default function Card(props) {
  
 
              sizes[key].class="active";
-             console.log(sizes)
 
   }
    const handleClick = () => {

@@ -8,7 +8,7 @@ export default function Item(props) {
     const handleClick = () => {
      
               dispatch(REMOVE_ITEM(item))
-              dispatch(SUB_ITEM(item))
+              dispatch(SUB_PRICE(item))
 
        
   };
