@@ -141,7 +141,7 @@ export default function ShopPage() {
       {
              items.map((item,index)=>(
        <a key={index} className="ProductCard_root__2we6k ProductCard_simple__thMup animated fadeIn">
-           <Card item={item} active={count.includes(item)} />
+           <Card item={item} count={count} active={count.includes(item)} />
        </a>
        ))
      }
