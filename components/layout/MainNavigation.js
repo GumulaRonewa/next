@@ -3,18 +3,45 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image'
 import {useRouter} from "next/router"
 import { useSelector, useDispatch } from 'react-redux'
-
+import CartList from "../cartlist/CartList"
 
  const MainNavigation = () => {
   const [active, setActive] = useState(false);
   const [userMenu, setuserMenu] = useState(false);
   const [cartView, setcartView] = useState(false);
       var count = useSelector((state) => state.counter);
-         console.log(count);
 
    count=count.cartItems;
    var length=count.length;
-  
+  const items=[
+     {
+       name:"Prm Hoodie",
+       first:"Premium",
+       last:"Hoddie",
+       sizes:[{name:"XS",class:""},{name:"S",class:""},{name:"M",class:"active"},{name:"L",class:""},{name:"XL",class:""}],
+       img:"https://mockup-api.teespring.com/v3/image/Z0-2E6B__BJVo_7vDr9bByjWBkA/800/800.jpg",
+        Price:"7820"
+    }
+     ,{
+       name:"Hoodie",
+       first:"Standard",
+       last:"Hoddie",
+       sizes:[{name:"XS",class:""},{name:"S",class:""},{name:"M",class:"active"},{name:"L",class:""},{name:"XL",class:""}],
+
+       img:"https://mockup-api.teespring.com/v3/image/oUNxfRal_rzL6F7Ib5R-2OH7SPI/800/800.jpg",
+        Price:"3820"
+    }
+    ,{
+       name:"T shirt",
+       first:"Premium",
+       sizes:[{name:"XS",class:""},{name:"S",class:""},{name:"M",class:"active"},{name:"L",class:""},{name:"XL",class:""}],
+       last:"Shirt",
+       img:"https://mockup-api.teespring.com/v3/image/-LeI5kHzz2efj2CgR5HiVlKfTJw/800/800.jpg",
+        Price:"2620"
+    }
+    
+   
+    ]
   const handleClick = () => {
 
     setActive(!active);
@@ -67,11 +94,17 @@ import { useSelector, useDispatch } from 'react-redux'
         </div>
       </div>
       <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        <button className="p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+        <button onClick={handleClickCart}  className="p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
 
           {length} 
         </button>
-
+         <div
+          className={`${
+            cartView ? '' : 'hidden'
+          }   `}
+        >
+           <CartList />
+        </div>
         <div className="ml-3 relative">
           <div>
             <button onClick={handleClickProfile} type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
@@ -79,8 +112,8 @@ import { useSelector, useDispatch } from 'react-redux'
               <Image width={35} height={35} className="h-8 w-8 rounded-full" src="https://e0.365dm.com/21/05/2048x1152/skysports-sadio-mane-liverpool_5377814.jpg" alt="" />
             </button>
           </div>
-
-         <div
+          
+           <div
           className={`${
             userMenu ? '' : 'hidden'
           }   `}

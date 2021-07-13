@@ -15,6 +15,53 @@ a {
 * {
   box-sizing: border-box;
 }
+.mycart {
+     height: 40px;
+    display: grid;
+    place-items:center;
+    font-size: 23px;
+    font:bold;
+   background: white;
+   margin: auto;
+   position: relative;
+   overflow: hidden;
+   border-radius: 5px 5px 5px 5px;
+   box-shadow: 0;
+   transform: scale(0.95);
+   transition: box-shadow 0.5s, transform 0.5s;
+}
+.items {
+     height: 80px;
+
+   background: white;
+   margin: auto;
+   position: relative;
+   overflow: hidden;
+   border-radius: 5px 5px 5px 5px;
+   box-shadow: 0;
+   transform: scale(0.95);
+   transition: box-shadow 0.5s, transform 0.5s;
+}
+ .items:hover {
+   transform: scale(1);
+   box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+.itemprices {
+     height: 230px;
+
+   background: white;
+   margin: auto;
+   position: relative;
+   overflow: hidden;
+   border-radius: 5px 5px 5px 5px;
+   box-shadow: 0;
+   transform: scale(0.95);
+   transition: box-shadow 0.5s, transform 0.5s;
+}
+ .itemprices:hover {
+   transform: scale(1);
+   box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
 .wrapper {
      height: 400px;
 
@@ -30,6 +77,13 @@ a {
  .wrapper:hover {
    transform: scale(1);
    box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+.devicer {
+  width: 20em;
+  display: block;
+  height: 1px;
+  background-color: #4b4b4d;
+  margin: 2px auto 0;
 }
  .wrapper .container {
    width: 100%;
