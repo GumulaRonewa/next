@@ -30,7 +30,7 @@ export const ADD_TO_CART = (product) => (dispatch, getState) => {
 
 // DECREMENT COUNTER BY 1
 export const REMOVE_ITEM = (product) => (dispatch, getState) => {
-  const cartItems = getState().counter.cartItems.slice();
+  const cartItems = getState().counter.cartItems;
    const filteredItems = cartItems.filter(item => item !== product)
 
     dispatch({type: types.REMOVE,payload:{cart:filteredItems} })

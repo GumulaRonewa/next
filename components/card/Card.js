@@ -8,8 +8,10 @@ export default function Card(props) {
   const [classN, setClassN] = useState(props.active ? "bottom clicked":"bottom");
   var item=props.item;
   var sizes=item.sizes;
-  const count = useSelector((state) => state.counter);
-  const dispatch = useDispatch();
+   var count = useSelector((state) => state.counter);
+
+     count=count.cartItems;  
+     const dispatch = useDispatch();
   
    const handleClick = () => {
       console.log("add");
@@ -25,7 +27,7 @@ export default function Card(props) {
           console.log("remove");
 
       dispatch(REMOVE_ITEM(item))
-      dispatch(SUB_PRICE(item))
+      //dispatch(SUB_PRICE(item))
 
         setClassN("bottom");
         setActive(false);
