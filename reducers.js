@@ -33,11 +33,12 @@ const initialTimerState = {
 const totalReducer = (state = 0, { type, payload }) => {
   switch (type) {
     case types.INCREMENT:
-      var total=state +payload.price;
+      var total=parseInt(state) +parseInt(payload.price);
+      console.log(payload);
       Cookies.set("total", JSON.stringify(total));
       return total;
     default:
-      return state
+      return parseInt(state)
   }
 }
 
