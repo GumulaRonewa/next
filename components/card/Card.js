@@ -7,6 +7,7 @@ export default function Card(props) {
   const [active, setActive] = useState(props.active);
   const [classN, setClassN] = useState(props.active ? "bottom clicked":"bottom");
   var item=props.item;
+  console.log(props);
   var sizes=item.sizes;
   const count = useSelector((state) => state.counter);
   const dispatch = useDispatch();
