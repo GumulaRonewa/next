@@ -14,7 +14,6 @@ export default function Card(props) {
      const dispatch = useDispatch();
   
    const handleClick = () => {
-      console.log("add");
 
       dispatch(ADD_TO_CART(item))
       dispatch(ADD_PRICE(item))
@@ -23,8 +22,14 @@ export default function Card(props) {
        
      
   };
+  const handleColor = () => {
+      console.log("change Colour");
+
+      
+       
+     
+  };
   const handleRemove = () => {
-          console.log("remove");
 
       dispatch(REMOVE_ITEM(item))
       dispatch(SUB_PRICE(item))
@@ -99,7 +104,9 @@ export default function Card(props) {
         <span className="product-color">
                 <h4>Colour</h4>
                 <ul className="ul-color">
+                   <div onClick={handleColor}>
                   <li><a href="#" className="orange active"></a></li>
+                  </div>
                   <li><a href="#" className="green"></a></li>
                   <li><a href="#" className="yellow"></a></li>
                 </ul>
