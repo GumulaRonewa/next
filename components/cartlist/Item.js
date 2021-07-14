@@ -19,7 +19,7 @@ export default function Item(props) {
                 
            <div className="flex-1 flex flex-col text-base space-x-4 py-4">
             <span className="CartItem_productName__x9t-a" style={{marginLeft:10,marginTop:-10}}>{item.name}</span>
-             <span className="CartItem_productName__x9t-a" style={{marginLeft:10}} >Size: M</span>
+             <span className="CartItem_productName__x9t-a" style={{marginLeft:10}} >Size: {item.size}</span>
 
             <span className="CartItem_productName__x9t-a" style={{marginLeft:10}}>Price: ZAR {item.Price}</span>
 

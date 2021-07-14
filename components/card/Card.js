@@ -21,13 +21,22 @@ export default function Card(props) {
   var item=props.item;
   var sizes=item.sizes;
    var count = useSelector((state) => state.counter);
-
+   var selected;
      count=count.cartItems;  
      const dispatch = useDispatch();
   
    const handleClick = () => {
-
-      dispatch(ADD_TO_CART(item))
+     
+       selected={
+        name:item.name,
+       first:item.first,
+       last:item.last,
+       size:"M",
+       colour:black ? "Black": orange ? "Orange": green ? "Green":"Black",
+       img:item.img,
+        Price:item.Price
+       }
+      dispatch(ADD_TO_CART(selected))
       dispatch(ADD_PRICE(item))
         setClassN("bottom clicked");
         setActive(true);
