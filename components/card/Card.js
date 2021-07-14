@@ -51,8 +51,47 @@ export default function Card(props) {
   };
   const handleSize = (e) => {
        var target=e.target;
+       target=target.innerHTML;
+       switch(target){
+          case "XS":
+            setXS("active")
+            setS("")
+            setM("")
+            setL("")
+            setXL("")
+            return;
+          case "S":
+            setXS("")
+            setS("active")
+            setM("")
+            setL("")
+            setXL("")
+            return;
+          case "M":
+            setXS("")
+            setS("")
+            setM("active")
+            setL("")
+            setXL("")
+            return;
+          case "L":
+            setXS("")
+            setS("")
+            setM("")
+            setL("active")
+            setXL("")
+            return;
+          case "XL":
+            setXS("")
+            setS("")
+            setM("")
+            setL("")
+            setXL("active")
+            return;
+          default:
+            return
 
-      console.log(target.innerHTML)    
+       }
   };
   const handleRemove = () => {
 
@@ -117,14 +156,14 @@ export default function Card(props) {
         <span className="product-size">
                 <h4>Size</h4>
                 <ul className="ul-size">
-                  <div>
+                  <div onClick={handleSize}>
                     <li>
                       <a className={XS} >XS
                        </a>
                     </li>
                   </div>
 
-                  <div>
+                  <div onClick={handleSize}>
                     <li>
                       <a className={S} >S
                        </a>
@@ -138,14 +177,14 @@ export default function Card(props) {
                     </li>
                   </div>
 
-                  <div >
+                  <div onClick={handleSize}>
                     <li>
                       <a className={L} >L
                        </a>
                     </li>
                   </div>
 
-                  <div>
+                  <div onClick={handleSize}>
                     <li>
                       <a className={XL} >XL
                        </a>
