@@ -5,9 +5,18 @@ import { useSelector, useDispatch } from 'react-redux'
 
 export default function Card(props) {
   const [active, setActive] = useState(props.active);
+  //Colours
   const [orange, setOrange] = useState(false);
   const [black, setBlack] = useState(true);
   const [green, setGreen] = useState(false);
+  //sizes
+    const [XS, setXS] = useState("");
+    const [S, setS] = useState("");
+    const [M, setM] = useState("active");
+    const [L, setL] = useState("");
+    const [XL, setXL] = useState("");
+  //end
+
   const [classN, setClassN] = useState(props.active ? "bottom clicked":"bottom");
   var item=props.item;
   var sizes=item.sizes;
@@ -41,7 +50,9 @@ export default function Card(props) {
       setGreen(false);    
   };
   const handleSize = (e) => {
-      console.log(e)    
+       var target=e.target;
+
+      console.log(target.innerHTML)    
   };
   const handleRemove = () => {
 
@@ -92,7 +103,7 @@ export default function Card(props) {
                 </span>
         </span>
         <span className="product-caption">
-                Water Over Everything Collection
+                Water Over Everything 
               </span>
         <span className="product-rating">
                 <i className="fa fa-star"></i>
@@ -108,35 +119,35 @@ export default function Card(props) {
                 <ul className="ul-size">
                   <div>
                     <li>
-                      <a className={""} >XS
+                      <a className={XS} >XS
                        </a>
                     </li>
                   </div>
 
                   <div>
                     <li>
-                      <a className={""} >S
+                      <a className={S} >S
                        </a>
                     </li>
                   </div>
 
                   <div onClick={handleSize} name='M'>
                     <li>
-                      <a className={"active"} >M
+                      <a className={M} >M
                        </a>
                     </li>
                   </div>
 
                   <div >
                     <li>
-                      <a className={""} >L
+                      <a className={L} >L
                        </a>
                     </li>
                   </div>
 
                   <div>
                     <li>
-                      <a className={""} >XL
+                      <a className={XL} >XL
                        </a>
                     </li>
                   </div>
