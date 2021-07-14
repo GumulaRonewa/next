@@ -351,8 +351,8 @@ a {
  .ul-color li a.green {
     background: #11e95b;
 }
- .ul-color li a.yellow {
-    background: #ffd414;
+ .ul-color li a.black {
+    background: black;
 }
  .ul-color li a.active:after {
     position: absolute;

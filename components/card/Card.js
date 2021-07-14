@@ -5,6 +5,9 @@ import { useSelector, useDispatch } from 'react-redux'
 
 export default function Card(props) {
   const [active, setActive] = useState(props.active);
+  const [orange, setOrange] = useState(false);
+  const [black, setBlack] = useState(true);
+  const [green, setGreen] = useState(false);
   const [classN, setClassN] = useState(props.active ? "bottom clicked":"bottom");
   var item=props.item;
   var sizes=item.sizes;
@@ -22,12 +25,20 @@ export default function Card(props) {
        
      
   };
-  const handleColor = () => {
-      console.log("change Colour");
-
-      
-       
-     
+  const handleBlack = () => {
+      setBlack(true);    
+      setOrange(false);    
+      setGreen(false);    
+  };
+   const handleGreen = () => {
+      setBlack(false);    
+      setOrange(false);    
+      setGreen(true);    
+  };
+   const handleOrange = () => {
+      setBlack(false);    
+      setOrange(true);    
+      setGreen(false);    
   };
   const handleRemove = () => {
 
@@ -104,11 +115,15 @@ export default function Card(props) {
         <span className="product-color">
                 <h4>Colour</h4>
                 <ul className="ul-color">
-                   <div onClick={handleColor}>
-                  <li><a href="#" className="orange active"></a></li>
+                   <div onClick={handleBlack}>
+                  <li><a href="#" className={`${  black ? 'black active' : 'black' }   `}></a></li>
                   </div>
-                  <li><a href="#" className="green"></a></li>
-                  <li><a href="#" className="yellow"></a></li>
+                  <div onClick={handleOrange}>
+                  <li><a href="#" className={`${  orange ? 'orange active' : 'orange' } `} ></a></li>
+                  </div>
+                  <div onClick={handleGreen}>
+                  <li><a href="#" className={`${  green ? 'green active' : 'green' } `}></a></li>
+                  </div>
                 </ul>
               </span>
        
