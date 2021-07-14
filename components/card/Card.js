@@ -40,6 +40,9 @@ export default function Card(props) {
       setOrange(true);    
       setGreen(false);    
   };
+  const handleSize = (e) => {
+      console.log(e)    
+  };
   const handleRemove = () => {
 
       dispatch(REMOVE_ITEM(item))
@@ -89,7 +92,7 @@ export default function Card(props) {
                 </span>
         </span>
         <span className="product-caption">
-                Winter Collection
+                Water Over Everything Collection
               </span>
         <span className="product-rating">
                 <i className="fa fa-star"></i>
@@ -103,13 +106,41 @@ export default function Card(props) {
         <span className="product-size">
                 <h4>Size</h4>
                 <ul className="ul-size">
-                  {
-                   sizes.map((item,index)=>(
-                  <li key={index}><button >
-                  <a className={item.class} >{item.name}
-                   </a>
-                  </button></li>
-                 ))}
+                  <div>
+                    <li>
+                      <a className={""} >XS
+                       </a>
+                    </li>
+                  </div>
+
+                  <div>
+                    <li>
+                      <a className={""} >S
+                       </a>
+                    </li>
+                  </div>
+
+                  <div onClick={handleSize} name='M'>
+                    <li>
+                      <a className={"active"} >M
+                       </a>
+                    </li>
+                  </div>
+
+                  <div >
+                    <li>
+                      <a className={""} >L
+                       </a>
+                    </li>
+                  </div>
+
+                  <div>
+                    <li>
+                      <a className={""} >XL
+                       </a>
+                    </li>
+                  </div>
+
                 </ul>
               </span>
         <span className="product-color">
