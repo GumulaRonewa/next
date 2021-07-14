@@ -24,14 +24,21 @@ export default function Card(props) {
    var selected;
      count=count.cartItems;  
      const dispatch = useDispatch();
-  
+   const Check = (arr) =>{
+       for (var i = 0 ; i <arr.length; i++) {
+           if(arr[i]==="active"){
+              return arr[i];
+           }
+         }  
+   }
    const handleClick = () => {
-     
+       var sizeS=[XS,S,M,L,XL];
+       var sze=Check(sizeS);
        selected={
         name:item.name,
        first:item.first,
        last:item.last,
-       size:"M",
+       size:sze,
        colour:black ? "Black": orange ? "Orange": green ? "Green":"Black",
        img:item.img,
         Price:item.Price
