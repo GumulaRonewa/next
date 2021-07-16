@@ -5,7 +5,7 @@ export default function Home(props) {
 	return(
     <div className="first">
       <video autoPlay  preLoad={true} id="video-background" muted loop  className="video">
-        <source src=https://cdn.videvo.net/videvo_files/video/free/2015-03/small_watermarked/Water_9_150fps_videvo_preview.mp4" type='video/mp4' />
+        <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4" />
       </video>
       <Link href="/shop">
         <button className="shoping">
