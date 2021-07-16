@@ -45,7 +45,7 @@ export default function CartList() {
                                     <Link href="/shop/checkout">
 
                                 <button className="bg-black font-medium text-white"  style={{width: "100%",height:40}}>Proceed to Checkout</button>
-                               <Link/>
+                               </Link>
                               </div></div>
             </div>
           </div>
