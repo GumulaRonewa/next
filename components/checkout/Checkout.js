@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3, 0, 5),
 
   },
-  dot{
+  dot :{
         background: 'black',
   },
   buttons: {
