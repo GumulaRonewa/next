@@ -38,7 +38,7 @@ export default function ShopPage() {
         Price:"2620"
     }
     ,{
-       name:"Cloth face mask",
+       name:"Face mask",
        first:"Face",
        sizes:[{name:"XS",class:""},{name:"S",class:""},{name:"M",class:"active"},{name:"L",class:""},{name:"XL",class:""}],
        last:"Mask",
@@ -47,7 +47,7 @@ export default function ShopPage() {
     }
     
     ,{
-       name:"Organic Tote Bag",
+       name:"Tote Bag",
        first:"Organic",
        last:"Bag",
         sizes:[{name:"XS",class:""},{name:"S",class:""},{name:"M",class:"active"},{name:"L",class:""},{name:"XL",class:""}],
