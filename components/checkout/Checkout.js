@@ -53,13 +53,16 @@ const useStyles = makeStyles((theme) => ({
   },
   stepper: {
     padding: theme.spacing(3, 0, 5),
-    background: 'black',
-    color: 'white',
+
+  },
+  dot{
+        background: 'black',
   },
   buttons: {
     display: 'flex',
     justifyContent: 'flex-end',
   },
+
   button: {
     marginTop: theme.spacing(3),
     marginLeft: theme.spacing(1),
@@ -106,8 +109,8 @@ export default function Checkout() {
           </Typography>
           <Stepper activeStep={activeStep} className={classes.stepper}>
             {steps.map((label) => (
-              <Step key={label}>
-                <StepLabel>{label}</StepLabel>
+              <Step className={classes.dot}  key={label}>
+                <StepLabel >{label}</StepLabel>
               </Step>
             ))}
           </Stepper>
