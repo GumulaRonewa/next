@@ -15,15 +15,46 @@ a {
 * {
   box-sizing: border-box;
 }
+.Grid_root__2GDws {
+    display: grid;
+    grid-gap: 0;
+    gap: 0;
+    grid-template-columns: repeat(1,minmax(0,1fr))
+}
+
+@media (min-width: 1024px) {
+    .Grid_root__2GDws {
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        grid-template-rows: repeat(2,minmax(0,1fr))
+    }
+}
+
+.Grid_root__2GDws>* {
+    background-color: transparent;
+    box-sizing: border-box;
+    overflow: hidden;
+    grid-row: span 1/span 1;
+    height: 500px;
+    max-height: 800px
+}
+
+@media (min-width: 1024px) {
+    .Grid_root__2GDws>* {
+        height:inherit;
+        grid-column: span 1/span 1
+    }
+}
 .video {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   z-index: -1;
 }
 .first{
   display:grid;
+    width: 100vw;
+
   place-items:center;
 }
 .shoping{
@@ -62,14 +93,15 @@ a {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   margin-top: 40vh;
+   width: 100vw;
+   margin-top: -10vh;
    min-height: 90vh;
    padding: 0 20px;
 }
 .countdowncontainer h1{
   text-transform: uppercase;
   margin-bottom: 30px;
-
+  font-size: 23px;
   text-align: center;
 }
 .countdown{
@@ -109,7 +141,7 @@ a {
    transition: box-shadow 0.5s, transform 0.5s;
 }
 .fit {
-    min-height: 100vh;
+    min-height: calc(100vh - 88px)
 }
  .items:hover {
    transform: scale(1);

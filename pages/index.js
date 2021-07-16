@@ -3,8 +3,13 @@ import Countdown from "../components/landing/Countdown"
 export default function HomePage(argument) {
   return(
 			<main className="fit">
-			        <Home />
-			         <Countdown />
-			 </main>
+       <div className="Grid_root__2GDws">
+        <Item />
+        </div>
+        <div className="Grid_root__2GDws">
+                <Countdown />
+        </div>
+        
+      </main>
           )
 }
