@@ -7,11 +7,9 @@ export default function Home(props) {
       <video autoPlay={true} muted loop  className="video">
         <source src="https://cdn.videvo.net/videvo_files/video/free/2015-03/small_watermarked/Water_9_150fps_videvo_preview.webm" type="video/webm"/>
       </video>
-      <Link href="/shop">
         <button className="shop">
          Shop Now
          </button>
-      </Link>
     </div>
 		)
 }
