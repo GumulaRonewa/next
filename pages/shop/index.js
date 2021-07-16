@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
-import {  ADD_TO_CART , REMOVE_ITEM } from '../../../actions'
-import Card from "../../../components/card/Card"
+import {  ADD_TO_CART , REMOVE_ITEM } from '../../actions'
+import Card from "../../components/card/Card"
 import { useState, useEffect } from "react";
 import Link from 'next/link';
 import Image from 'next/image'
