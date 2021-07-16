@@ -1,4 +1,3 @@
-import styles from './Countdown.module.css'
 import {useState, useEffect} from 'react'
 export default function Countdown(props) {
   const [days,setDays]=useState(10);
