@@ -109,7 +109,7 @@ a {
    transition: box-shadow 0.5s, transform 0.5s;
 }
 .fit {
-    min-height: calc(100vh - 88px)
+    min-height: 100vh;
 }
  .items:hover {
    transform: scale(1);
