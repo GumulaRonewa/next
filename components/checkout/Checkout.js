@@ -109,8 +109,8 @@ export default function Checkout() {
           </Typography>
           <Stepper activeStep={activeStep} className={classes.stepper}>
             {steps.map((label) => (
-              <Step className={classes.dot}  key={label}>
-                <StepLabel >{label}</StepLabel>
+              <Step  key={label}>
+                <StepLabel  >{label}</StepLabel>
               </Step>
             ))}
           </Stepper>

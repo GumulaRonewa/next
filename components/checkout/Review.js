@@ -52,7 +52,7 @@ export default function Review() {
       <List disablePadding>
         {count.map((product) => (
           <ListItem className={classes.listItem} key={product.name}>
-            <ListItemText primary={product.name} secondary={product.size} />
+            <ListItemText primary={product.name} secondary={`Size:${product.size}`} />
             <Typography variant="body2">{product.Price}</Typography>
           </ListItem>
         ))}
