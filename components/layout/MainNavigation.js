@@ -84,12 +84,7 @@ import CartList from "../cartlist/CartList"
            <Link href="/shop">
             <a className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Shop All</a>
             </Link>
-            <Link href="/shop/apparels">
-            <a className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Apparel</a>
-             </Link>
-             <Link href="/shop/accessories">
-            <a className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Accessories</a>
-           </Link>
+           
           </div>
         </div>
       </div>

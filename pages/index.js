@@ -1,5 +1,10 @@
+import Home from "../components/landing/Home"
+import Countdown from "../components/landing/Countdown"
 export default function HomePage(argument) {
   return(
-    <h1>Home page</h1>
-    )
+			<main className="fit">
+			        <Home />
+			         <Countdown />
+			 </main>
+          )
 }
