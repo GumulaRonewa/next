@@ -1,12 +1,13 @@
 import Link from 'next/link';
+import Image from 'next/image'
 
 export default function Home(props) {
 
 	return(
     <div className="first">
-      <video autoPlay  preLoad={true} id="video-background" muted loop  className="video">
-        <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4" />
-      </video>
+      <div className="video">
+              <Image  layout="fill" className=" mb-10" objectFit="cover" src={item.img} alt="" />
+      </div>
       <Link href="/shop">
         <button className="shoping">
          Shop Now
