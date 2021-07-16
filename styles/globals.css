@@ -26,11 +26,11 @@ a {
   display:grid;
   place-items:center;
 }
-.shop{
+.shoping{
   background-color: transparent;
   margin-top: 40vh;
   border-color: white;
-    color: white;
+    color: red;
     font-size: 20px;
     border-radius: 20px;
     height: 53px;
