@@ -4,7 +4,7 @@ export default function HomePage(argument) {
   return(
 			<main className="fit">
        <div className="Grid_root__2GDws">
-        <Item />
+        <Home />
         </div>
         <div className="Grid_root__2GDws">
                 <Countdown />

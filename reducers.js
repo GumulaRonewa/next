@@ -10,8 +10,7 @@ const counterReducer = (state = { cartItems: JSON.parse(getNum() || "[]") }, { t
     case types.REMOVE:
       Cookies.set("cart", JSON.stringify(payload.cart));
       return { cartItems: payload.cart }
-    case types.RESET:
-      return 0
+    
     default:
       return { cartItems: state.cartItems }
   }
