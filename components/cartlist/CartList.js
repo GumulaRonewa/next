@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Item from './Item';
 import { useSelector, useDispatch } from 'react-redux'
+import Link from 'next/link';
 
 export default function CartList() {
   var count = useSelector((state) => state.counter);
@@ -41,7 +42,10 @@ export default function CartList() {
                               </li><li className="flex justify-between py-1">
                               <span>Shipping</span><span className="font-bold tracking-wide">ZAR {ship}</span>
                               </li></ul><div className="flex justify-between border-t border-accent-2 py-3 font-bold mb-2"><span>Total</span><span>ZA {total}</span></div><div>
-                              <button className="bg-black font-medium text-white"  style={{width: "100%",height:40}}>Proceed to Checkout</button>
+                                    <Link href="/shop/checkout">
+
+                                <button className="bg-black font-medium text-white"  style={{width: "100%",height:40}}>Proceed to Checkout</button>
+                               <Link/>
                               </div></div>
             </div>
           </div>
