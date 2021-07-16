@@ -33,11 +33,11 @@ export default function Countdown(props) {
     <>
 
      <section className="countdowncontainer">
-
-          <div className="countdown">
-          <h1>
+      <h1>
         Next Drop
       </h1>
+          <div className="countdown">
+          
               <article>
                 <p>{days}</p>
                 <h3>Days</h3>
