@@ -6,6 +6,11 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 
 export default function PaymentForm() {
+  const payments = [
+  { name: 'Card holder', detail: 'Mr John Smith' },
+  { name: 'Card number', detail: 'xxxx-xxxx-xxxx-1234' },
+  { name: 'Expiry date', detail: '04/2024' },
+  ];
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>

@@ -44,7 +44,8 @@ const totalReducer = (state = parseInt(getTotal() || "0"), { type, payload }) =>
       return parseInt(state)
   }
 }
-const deliveryReducer = (state =JSON.parse(getDetails() || "{}") , { type, payload }) => {
+
+const deliveryReducer = (state =JSON.parse(getDetails() || getEmpty()) , { type, payload }) => {
   switch (type) {
     case types.DELIVERY:
       Cookies.set("details", JSON.stringify(payload.details));
@@ -60,6 +61,19 @@ function getTotal() {
 function getDetails() {
   
     return Cookies.get("details")
+}
+function getEmpty() {
+  const det={
+    firstName:"",
+    lastName:"",
+    address1:"",
+    address2:"",
+    city:"",
+    zip:"",
+    country:"",
+
+  }
+    return det;
 }
 // COMBINED REDUCERS
 const reducers = {

@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from 'react-redux'
 export default function AddressForm() {
   var details=[];
        const dispatch = useDispatch();
+   var user = useSelector((state) => state.delivery);
 
   var info ={
     firstName:"",
@@ -66,6 +67,7 @@ export default function AddressForm() {
         <Grid item xs={12} sm={6}>
           <TextField
             required
+            defaultValue={user.firstName}
             id="firstName"
             onChange={handleText}
             name="firstName"
@@ -77,7 +79,8 @@ export default function AddressForm() {
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="lastName"
+            id="lastName",
+            defaultValue={user.lastName}
             name="lastName"
             label="Last name"
             onChange={handleText}
@@ -90,6 +93,7 @@ export default function AddressForm() {
             required
             id="address1"
             name="address1"
+            defaultValue={user.address1}
             label="Address line 1"
             onChange={handleText}
             fullWidth
@@ -100,6 +104,7 @@ export default function AddressForm() {
           <TextField
             id="address2"
             name="address2"
+            defaultValue={user.address2}
             label="Address line 2"
             onChange={handleText}
             fullWidth
@@ -111,6 +116,7 @@ export default function AddressForm() {
             required
             id="city"
             name="city"
+            defaultValue={user.city}
             onChange={handleText}
             label="City"
             fullWidth
@@ -124,6 +130,7 @@ export default function AddressForm() {
           <TextField
             required
             id="zip"
+            defaultValue={user.zip}
             onChange={handleText}
             name="zip"
             label="Zip / Postal code"
@@ -137,6 +144,7 @@ export default function AddressForm() {
             id="country"
             name="country"
             label="Country"
+            defaultValue={user.country}
             onChange={handleText}
             fullWidth
             autoComplete="shipping country"
