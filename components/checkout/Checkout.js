@@ -56,7 +56,6 @@ const useStyles = makeStyles((theme) => ({
 
   },
   dot :{
-        background: 'black',
         color: 'black',
   },
   buttons: {
@@ -111,7 +110,7 @@ export default function Checkout() {
           <Stepper activeStep={activeStep} className={classes.stepper}>
             {steps.map((label) => (
               <Step  key={label}>
-                <StepLabel StepIconProps={{   classes: {active: classes.dot}}} >{label}</StepLabel>
+                <StepLabel StepIconProps={{classes: {active: classes.dot}}} >{label}</StepLabel>
               </Step>
             ))}
           </Stepper>
