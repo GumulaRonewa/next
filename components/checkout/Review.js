@@ -7,14 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Grid from '@material-ui/core/Grid';
 import { useSelector, useDispatch } from 'react-redux'
 
-const products = [
-  { name: 'Product 1', desc: 'A nice thing', price: '$9.99' },
-  { name: 'Product 2', desc: 'Another thing', price: '$3.45' },
-  { name: 'Product 3', desc: 'Something else', price: '$6.51' },
-  { name: 'Product 4', desc: 'Best thing of all', price: '$14.11' },
-  { name: 'Shipping', desc: '', price: 'Free' },
-];
-const addresses = ['1 Material-UI Drive', 'Reactville', 'Anytown', '99999', 'USA'];
+
 const payments = [
   { name: 'Card type', detail: 'Visa' },
   { name: 'Card holder', detail: 'Mr John Smith' },
@@ -37,12 +30,23 @@ const useStyles = makeStyles((theme) => ({
 export default function Review() {
   const classes = useStyles();
    var count = useSelector((state) => state.counter);
+     const [address, setAddress] = useState([]);
+
    var user = useSelector((state) => state.delivery);
    console.log(user);
   var sub = useSelector((state) => state.total);
   var tax =sub*0.15;
   sub =sub*0.85;
   var ship= sub===0 ? 0:100;
+  useEffect(() => {
+    var userinfo=[];
+    userinfo.push(user.address1)
+    userinfo.push(user.address1)
+    userinfo.push(user.city)
+    userinfo.push(user.zip)
+    userinfo.push(user.country)
+    setAddress(userinfo)
+  });
   var total =ship+tax+sub;
    count=count.cartItems;
       count =count.reverse()
@@ -71,7 +75,7 @@ export default function Review() {
             Shipping
           </Typography>
           <Typography gutterBottom>John Smith</Typography>
-          <Typography gutterBottom>{addresses.join(', ')}</Typography>
+          <Typography gutterBottom>{address.join(', ')}</Typography>
         </Grid>
         <Grid item container direction="column" xs={12} sm={6}>
           <Typography variant="h6" gutterBottom className={classes.title}>
