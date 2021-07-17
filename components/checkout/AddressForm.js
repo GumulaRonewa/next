@@ -79,7 +79,7 @@ export default function AddressForm() {
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="lastName",
+            id="lastName"
             defaultValue={user.lastName}
             name="lastName"
             label="Last name"
