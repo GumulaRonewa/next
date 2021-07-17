@@ -22,12 +22,6 @@ a {
     grid-template-columns: repeat(1,minmax(0,1fr))
 }
 
-@media (min-width: 1024px) {
-    .Grid_root__2GDws {
-        grid-template-columns:repeat(3,minmax(0,1fr));
-        grid-template-rows: repeat(2,minmax(0,1fr))
-    }
-}
 
 .Grid_root__2GDws>* {
     background-color: transparent;
@@ -40,6 +34,7 @@ a {
 
 @media (min-width: 1024px) {
     .Grid_root__2GDws>* {
+        height:inherit;
         grid-column: span 1/span 1
     }
 }
