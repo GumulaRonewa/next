@@ -4,6 +4,20 @@ import Image from 'next/image'
 import {useRouter} from "next/router"
 import { useSelector, useDispatch } from 'react-redux'
 import CartList from "../cartlist/CartList"
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import Badge from '@material-ui/core/Badge';
+import { withStyles } from '@material-ui/core/styles';
+import IconButton from '@material-ui/core/IconButton';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+
+const StyledBadge = withStyles((theme) => ({
+  badge: {
+    right: -3,
+    top: 13,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: '0 4px',
+  },
+}))(Badge);
 
  const MainNavigation = () => {
   const [active, setActive] = useState(false);
@@ -89,10 +103,12 @@ import CartList from "../cartlist/CartList"
         </div>
       </div>
       <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        <button onClick={handleClickCart}  className="p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-
-          {length} 
-        </button>
+            <IconButton onClick={handleClickCart}  aria-label="cart">
+              <StyledBadge badgeContent={length} color="secondary">
+                <ShoppingCartIcon />
+              </StyledBadge>
+            </IconButton>
+          
          <div
           className={`${
             cartView ? '' : 'hidden'
