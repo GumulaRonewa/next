@@ -8,6 +8,8 @@ import { PAYMENT } from '../../actions'
 import { useSelector, useDispatch } from 'react-redux'
 
 export default function PaymentForm() {
+         const dispatch = useDispatch();
+
   var payments = [
   { name: 'Card holder', detail: '' },
   { name: 'Card number', detail: '' },
