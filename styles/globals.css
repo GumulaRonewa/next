@@ -70,6 +70,10 @@ a {
     width: 150px;
 
 }
+.captions {
+    font-weight: 500px;
+    font-family: Hind,sans-serif;
+}
 .mycart {
      height: 40px;
     display: grid;
