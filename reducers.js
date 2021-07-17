@@ -59,7 +59,7 @@ function getTotal() {
 }
 function getDetails() {
   
-    return Cookies.get("total")
+    return Cookies.get("details")
 }
 // COMBINED REDUCERS
 const reducers = {
