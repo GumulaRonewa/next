@@ -4,13 +4,37 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import { PAYMENT } from '../../actions'
+import { useSelector, useDispatch } from 'react-redux'
 
 export default function PaymentForm() {
-  const payments = [
-  { name: 'Card holder', detail: 'Mr John Smith' },
-  { name: 'Card number', detail: 'xxxx-xxxx-xxxx-1234' },
-  { name: 'Expiry date', detail: '04/2024' },
+  var payments = [
+  { name: 'Card holder', detail: '' },
+  { name: 'Card number', detail: '' },
+  { name: 'Expiry date', detail: '' },
   ];
+  const handleText = (e) => {
+            const { name, value } = e.target;
+            switch(name){
+              case "name":
+                payments[0].detail=value;
+                dispatch(PAYMENT(payments))
+                return;
+              case "cardNo":
+                payments[1].detail=value;
+                dispatch(PAYMENT(payments))
+                return;
+              case "exp":
+                payments[2].detail=value;
+                dispatch(PAYMENT(payments))
+                return;
+              
+              default:
+                return;
+
+            }
+ 
+  };
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
@@ -18,19 +42,22 @@ export default function PaymentForm() {
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
-          <TextField required id="cardName" label="Name on card" fullWidth autoComplete="cc-name" />
+          <TextField onChange={handleText} required id="cardName" name="name" label="Name on card" fullWidth autoComplete="cc-name" />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
             required
+            onChange={handleText}
             id="cardNumber"
+            name="cardNo"
+            onChange={handleText}
             label="Card number"
             fullWidth
             autoComplete="cc-number"
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <TextField required id="expDate" label="Expiry date" fullWidth autoComplete="cc-exp" />
+          <TextField onChange={handleText} name="exp" required id="expDate" label="Expiry date" fullWidth autoComplete="cc-exp" />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField

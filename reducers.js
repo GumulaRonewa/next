@@ -54,6 +54,14 @@ const deliveryReducer = (state =JSON.parse(getDetails() || getEmpty()) , { type,
       return state;
   }
 }
+const paymentReducer = (state =[] , { type, payload }) => {
+  switch (type) {
+    case types.PAYMENT:
+      return payload.payment;
+    default:
+      return state;
+  }
+}
 function getTotal() {
   
     return Cookies.get("total")
@@ -80,6 +88,7 @@ const reducers = {
   counter: counterReducer,
   total: totalReducer,
   delivery: deliveryReducer,
+  payment: paymentReducer,
 }
 
 export default combineReducers(reducers)

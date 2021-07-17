@@ -30,6 +30,11 @@ export const DELIVERY = (delivery) => (dispatch, getState) => {
     dispatch({type: types.DELIVERY,payload:{details:delivery} })
 
   }
+export const PAYMENT = (Payment) => (dispatch, getState) => {
+ 
+    dispatch({type: types.PAYMENT,payload:{payment:Payment} })
+
+  }
 	
 
 // DECREMENT COUNTER BY 1

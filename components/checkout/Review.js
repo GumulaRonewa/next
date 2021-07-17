@@ -8,11 +8,6 @@ import Grid from '@material-ui/core/Grid';
 import { useSelector, useDispatch } from 'react-redux'
 
 
-const payments = [
-  { name: 'Card holder', detail: 'Mr John Smith' },
-  { name: 'Card number', detail: 'xxxx-xxxx-xxxx-1234' },
-  { name: 'Expiry date', detail: '04/2024' },
-];
 
 const useStyles = makeStyles((theme) => ({
   listItem: {
@@ -32,7 +27,7 @@ export default function Review() {
      const [address, setAddress] = useState([]);
 
    var user = useSelector((state) => state.delivery);
-   console.log(user);
+   var payments = useSelector((state) => state.payment);
   var sub = useSelector((state) => state.total);
   var tax =sub*0.15;
   sub =sub*0.85;

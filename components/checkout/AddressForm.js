@@ -11,16 +11,7 @@ export default function AddressForm() {
        const dispatch = useDispatch();
    var user = useSelector((state) => state.delivery);
 
-  var info ={
-    firstName:"",
-    lastName:"",
-    address1:"",
-    address2:"",
-    city:"",
-    zip:"",
-    country:"",
-
-  }
+  var info =user;
   const handleText = (e) => {
             const { name, value } = e.target;
             switch(name){
