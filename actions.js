@@ -25,7 +25,11 @@ export const ADD_TO_CART = (product) => (dispatch, getState) => {
 		dispatch({type: types.ADD,payload:{cart:cartItems} })
 
 	}
+export const DELIVERY = (delivery) => (dispatch, getState) => {
+ 
+    dispatch({type: types.DELIVERY,payload:{details:delivery} })
 
+  }
 	
 
 // DECREMENT COUNTER BY 1

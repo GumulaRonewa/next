@@ -37,6 +37,8 @@ const useStyles = makeStyles((theme) => ({
 export default function Review() {
   const classes = useStyles();
    var count = useSelector((state) => state.counter);
+   var user = useSelector((state) => state.delivery);
+   console.log(user);
   var sub = useSelector((state) => state.total);
   var tax =sub*0.15;
   sub =sub*0.85;

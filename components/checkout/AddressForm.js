@@ -4,8 +4,59 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-
+import { DELIVERY } from '../../actions'
+import { useSelector, useDispatch } from 'react-redux'
 export default function AddressForm() {
+  var details=[];
+       const dispatch = useDispatch();
+
+  var info ={
+    firstName:"",
+    lastName:"",
+    address1:"",
+    address2:"",
+    city:"",
+    zip:"",
+    country:"",
+
+  }
+  const handleText = (e) => {
+            const { name, value } = e.target;
+            switch(name){
+              case "firstName":
+                info.firstName=value;
+                dispatch(DELIVERY(info))
+                return;
+              case "lastName":
+                info.lastName=value;
+                dispatch(DELIVERY(info))
+                return;
+              case "address1":
+                info.address1=value;
+                dispatch(DELIVERY(info))
+                return;
+              case "address2":
+                info.address2=value;
+                dispatch(DELIVERY(info))
+                return;
+              case "city":
+                info.city=value;
+                dispatch(DELIVERY(info))
+                return;
+              case "zip":
+                info.zip=value;
+                dispatch(DELIVERY(info))
+                return;
+              case "country":
+                info.country=value;
+                dispatch(DELIVERY(info))
+                return;
+              default:
+                return;
+
+            }
+ 
+  };
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
@@ -16,6 +67,7 @@ export default function AddressForm() {
           <TextField
             required
             id="firstName"
+            onChange={handleText}
             name="firstName"
             label="First name"
             fullWidth
@@ -28,6 +80,7 @@ export default function AddressForm() {
             id="lastName"
             name="lastName"
             label="Last name"
+            onChange={handleText}
             fullWidth
             autoComplete="family-name"
           />
@@ -38,6 +91,7 @@ export default function AddressForm() {
             id="address1"
             name="address1"
             label="Address line 1"
+            onChange={handleText}
             fullWidth
             autoComplete="shipping address-line1"
           />
@@ -47,6 +101,7 @@ export default function AddressForm() {
             id="address2"
             name="address2"
             label="Address line 2"
+            onChange={handleText}
             fullWidth
             autoComplete="shipping address-line2"
           />
@@ -56,6 +111,7 @@ export default function AddressForm() {
             required
             id="city"
             name="city"
+            onChange={handleText}
             label="City"
             fullWidth
             autoComplete="shipping address-level2"
@@ -68,6 +124,7 @@ export default function AddressForm() {
           <TextField
             required
             id="zip"
+            onChange={handleText}
             name="zip"
             label="Zip / Postal code"
             fullWidth
@@ -80,6 +137,7 @@ export default function AddressForm() {
             id="country"
             name="country"
             label="Country"
+            onChange={handleText}
             fullWidth
             autoComplete="shipping country"
           />

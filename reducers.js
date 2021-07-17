@@ -44,6 +44,15 @@ const totalReducer = (state = parseInt(getTotal() || "0"), { type, payload }) =>
       return parseInt(state)
   }
 }
+const deliveryReducer = (state = {}, { type, payload }) => {
+  switch (type) {
+    case types.DELIVERY:
+      
+      return payload.details;
+    default:
+      return state;
+  }
+}
 function getTotal() {
   
     return Cookies.get("total")
@@ -52,6 +61,7 @@ function getTotal() {
 const reducers = {
   counter: counterReducer,
   total: totalReducer,
+  delivery: deliveryReducer,
 }
 
 export default combineReducers(reducers)
