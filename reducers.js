@@ -73,7 +73,7 @@ function getEmpty() {
     country:"",
 
   }
-    return det;
+    return JSON.stringify(det);
 }
 // COMBINED REDUCERS
 const reducers = {
