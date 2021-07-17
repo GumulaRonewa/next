@@ -6,7 +6,7 @@ export default function Home(props) {
 	return(
     <div className="first">
       <div className="video">
-              <Image  layout="fill" className=" mb-10" objectFit="cover" src={"https://cdn.arstechnica.net/wp-content/uploads/2014/04/Water.jpg"} alt="" />
+              <Image  layout="fill" className=" mb-10" objectFit="cover" src={"https://wokiee.reactdemo.hasthemes.com/assets/images/slides/01/slide-01.jpg"} alt="" />
       </div>
       <Link href="/shop">
         <button className="shoping">
