@@ -74,6 +74,12 @@ a {
     font-weight: 500px;
     font-family: Hind,sans-serif;
 }
+@media (max-width: 460px){
+.captions{
+    font-size: 19px;
+    line-height: 1.1;
+    margin-top: 5px;
+}}
 .mycart {
      height: 40px;
     display: grid;
