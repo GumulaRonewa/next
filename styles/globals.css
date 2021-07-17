@@ -54,7 +54,7 @@ a {
 .first{
   display:grid;
     width: 100vw;
-
+    height: 90vh;
   place-items:center;
 }
 .placecenter{
