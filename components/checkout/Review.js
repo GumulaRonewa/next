@@ -38,6 +38,9 @@ export default function Review() {
   var tax =sub*0.15;
   sub =sub*0.85;
   var ship= sub===0 ? 0:100;
+  var total =ship+tax+sub;
+   count=count.cartItems;
+      count =count.reverse()
   useEffect(() => {
     var userinfo=[];
     userinfo.push(user.address1)
@@ -46,10 +49,8 @@ export default function Review() {
     userinfo.push(user.zip)
     userinfo.push(user.country)
     setAddress(userinfo)
-  });
-  var total =ship+tax+sub;
-   count=count.cartItems;
-      count =count.reverse()
+  },[]);
+  
   return (
     <Fragment>
       <Typography variant="h6" gutterBottom>
