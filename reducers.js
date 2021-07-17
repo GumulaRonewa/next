@@ -57,6 +57,7 @@ const deliveryReducer = (state =JSON.parse(getDetails() || getEmpty()) , { type,
 const paymentReducer = (state =[] , { type, payload }) => {
   switch (type) {
     case types.PAYMENT:
+      
       return payload.payment;
     default:
       return state;

@@ -28,6 +28,7 @@ export default function Review() {
 
    var user = useSelector((state) => state.delivery);
    var payments = useSelector((state) => state.payment);
+   console.log(payments)
   var sub = useSelector((state) => state.total);
   var tax =sub*0.15;
   sub =sub*0.85;
