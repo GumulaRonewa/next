@@ -23,39 +23,11 @@ const StyledBadge = withStyles((theme) => ({
   const [active, setActive] = useState(false);
   const [userMenu, setuserMenu] = useState(false);
   const [cartView, setcartView] = useState(false);
+  const [length, setLength] = useState(0);
       var count = useSelector((state) => state.counter);
 
    count=count.cartItems;
-   var length=count.length;
-  const items=[
-     {
-       name:"Prm Hoodie",
-       first:"Premium",
-       last:"Hoddie",
-       sizes:[{name:"XS",class:""},{name:"S",class:""},{name:"M",class:"active"},{name:"L",class:""},{name:"XL",class:""}],
-       img:"https://mockup-api.teespring.com/v3/image/Z0-2E6B__BJVo_7vDr9bByjWBkA/800/800.jpg",
-        Price:"7820"
-    }
-     ,{
-       name:"Hoodie",
-       first:"Standard",
-       last:"Hoddie",
-       sizes:[{name:"XS",class:""},{name:"S",class:""},{name:"M",class:"active"},{name:"L",class:""},{name:"XL",class:""}],
-
-       img:"https://mockup-api.teespring.com/v3/image/oUNxfRal_rzL6F7Ib5R-2OH7SPI/800/800.jpg",
-        Price:"3820"
-    }
-    ,{
-       name:"T shirt",
-       first:"Premium",
-       sizes:[{name:"XS",class:""},{name:"S",class:""},{name:"M",class:"active"},{name:"L",class:""},{name:"XL",class:""}],
-       last:"Shirt",
-       img:"https://mockup-api.teespring.com/v3/image/-LeI5kHzz2efj2CgR5HiVlKfTJw/800/800.jpg",
-        Price:"2620"
-    }
-    
-   
-    ]
+  
   const handleClick = () => {
 
     setActive(!active);
@@ -67,6 +39,9 @@ const StyledBadge = withStyles((theme) => ({
    const handleClickProfile = () => {
     setuserMenu(!userMenu);
   };
+  useEffect(() => {
+    setLength(count.length)
+  });
   return (
     <>
 <nav className="bg-gray-100">
