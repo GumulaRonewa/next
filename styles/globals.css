@@ -73,6 +73,8 @@ a {
 .captions {
     font-weight: 500;
     font-family: Hind,sans-serif;
+    font-size: 25px;
+
 }
 @media (max-width: 460px){
 .captions{
