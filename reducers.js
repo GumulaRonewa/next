@@ -44,16 +44,20 @@ const totalReducer = (state = parseInt(getTotal() || "0"), { type, payload }) =>
       return parseInt(state)
   }
 }
-const deliveryReducer = (state = {}, { type, payload }) => {
+const deliveryReducer = (state =JSON.parse(getDetails() || "{}") , { type, payload }) => {
   switch (type) {
     case types.DELIVERY:
-      
+      Cookies.set("details", JSON.stringify(payload.details));
       return payload.details;
     default:
       return state;
   }
 }
 function getTotal() {
+  
+    return Cookies.get("total")
+}
+function getDetails() {
   
     return Cookies.get("total")
 }
