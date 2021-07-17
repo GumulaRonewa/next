@@ -57,9 +57,14 @@ a {
 
   place-items:center;
 }
+.placecenter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .shoping{
   background-color: blue;
-  margin-top: 36vh;
   border-color: white;
     color: white;
     font-size: 20px;
