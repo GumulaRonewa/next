@@ -409,10 +409,12 @@ a {
 }
  .ul-size {
     margin-left: 15px;
+   cursor:pointer;
 }
  .ul-size li {
     list-style: none;
     float: left;
+   cursor:pointer;
     margin-right: 20px;
 }
  .ul-size li a {
