@@ -128,10 +128,10 @@ const StyledBadge = withStyles((theme) => ({
     <Link href="/shop">
       <a className="text-black hover:bg-gray-700 hover:text-white text-black block px-3 py-2 rounded-md text-base font-medium">Shop All</a>
     </Link>
-    <Link href="/shop/apparels">
+    <Link href="/shop">
       <a  className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Apparel</a>
     </Link>
-    <Link href="/shop/accessories">
+    <Link href="/shop">
       <a className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Accessories</a>
       </Link>
     </div>
