@@ -84,7 +84,7 @@ export default function ShopPage() {
  >
     
   <li className="block text-sm leading-5 text-accent-4 lg:text-base lg:no-underline lg:font-bold lg:tracking-wide hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8 underline">
-<a className="block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4" >Colaborations</a>
+<a className="block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4" >Upcoming Colabs</a>
  <div>
         <Link href="/">
           <a  className="text-black hover:bg-gray-700 hover:text-white  text-black block px-3 py-2 rounded-md text-base font-medium" aria-current="page">WT/R X Nike</a>
@@ -157,15 +157,15 @@ export default function ShopPage() {
  >
     
   <li className="block text-sm leading-5 text-accent-4 lg:text-base lg:no-underline lg:font-bold lg:tracking-wide hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8 underline">
-<a className="block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4" >Filter by</a>
+<a className="block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4" >Next Collections</a>
  <div>
         <Link href="/">
-          <a  className="text-black hover:bg-gray-700 hover:text-white  text-black block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Price</a>
+          <a  className="text-black hover:bg-gray-700 hover:text-white  text-black block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Water is life</a>
         </Link>
       </div>
       <div>
         <Link href="/shop">
-          <a className="text-black hover:bg-gray-700 hover:text-white text-black block px-3 py-2 rounded-md text-base font-medium">Release date</a>
+          <a className="text-black hover:bg-gray-700 hover:text-white text-black block px-3 py-2 rounded-md text-base font-medium">Drink water</a>
         </Link>
       </div>
 </li>
