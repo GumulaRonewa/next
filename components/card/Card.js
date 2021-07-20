@@ -214,13 +214,13 @@ export default function Card(props) {
                 <h4>Colour</h4>
                 <ul className="ul-color">
                    <div onClick={handleBlack}>
-                  <li><a href="#" className={`${  black ? 'black active' : 'black' }   `}></a></li>
+                  <li><a className={`${  black ? 'black active' : 'black' }   `}></a></li>
                   </div>
                   <div onClick={handleOrange}>
-                  <li><a href="#" className={`${  orange ? 'orange active' : 'orange' } `} ></a></li>
+                  <li><a className={`${  orange ? 'orange active' : 'orange' } `} ></a></li>
                   </div>
                   <div onClick={handleGreen}>
-                  <li><a href="#" className={`${  green ? 'green active' : 'green' } `}></a></li>
+                  <li><a className={`${  green ? 'green active' : 'green' } `}></a></li>
                   </div>
                 </ul>
               </span>
