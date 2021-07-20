@@ -6,7 +6,7 @@ export default function Home(props) {
 	return(
     <div className="first">
       <div className="video">
-              <Image  layout="fill" className=" mb-10" objectFit="cover" src={"https://wokiee.reactdemo.hasthemes.com/assets/images/slides/01/slide-01.jpg"} alt="" />
+              <Image  layout="fill" className="imgcenter" objectFit="cover" src={"https://wokiee.reactdemo.hasthemes.com/assets/images/slides/01/slide-01.jpg"} alt="" />
       </div>
        <div className="placecenter">
          <div className="captions">
