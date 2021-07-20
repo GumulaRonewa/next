@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import * as types from './types'
 import Cookies from 'js-cookie'
-// COUNTER REDUCER
+
 const counterReducer = (state = { cartItems: JSON.parse(getNum() || "[]") }, { type,payload }) => {
   switch (type) {
     case types.ADD:
@@ -22,13 +22,11 @@ function getNum() {
     return Cookies.get("cart")
 }
 
-// INITIAL TIMER STATE
 const initialTimerState = {
   lastUpdate: 0,
   light: false,
 }
 
-// TIMER REDUCER
 const totalReducer = (state = parseInt(getTotal() || "0"), { type, payload }) => {
   switch (type) {
     case types.INCREMENT:
