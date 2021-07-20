@@ -31,7 +31,12 @@ a {
     height: 500px;
     max-height: 800px
 }
-
+.imgcenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
 @media (min-width: 1024px) {
     .Grid_root__2GDws>* {
         height:inherit;
